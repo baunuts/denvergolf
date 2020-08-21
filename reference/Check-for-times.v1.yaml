@@ -1,0 +1,187 @@
+openapi: 3.0.0
+info:
+  title: Check for times
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  '/times/{day}':
+    parameters:
+      - schema:
+          type: string
+        name: day
+        in: path
+        required: true
+    get:
+      summary: List times for given day
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '':
+                    type: string
+              examples:
+                example-1:
+                  value:
+                    CoursesIDs: '4921,4922,4923,4924,4925,4926,4927,4928,4929,4930,4931,4932,4933,4934,4935'
+                    MinPrice: '0'
+                    MaxPrice: '100'
+                    RedirectTo: null
+                    SessionID: wm54g4r245dgs5hmhvf1c0n3
+                    CsrfToken: 22498795-1002-4576-afd1-b9e5e54d15a1
+                    Packageses: null
+                    Reservations:
+                      - RecNo: 1
+                        SponsorID: 6439
+                        SponsorIds: null
+                        CourseID: 4923
+                        TeeTime: '2020-08-21T15:10:00'
+                        Price: 0.02
+                        Rackrate: 61
+                        PlayersAvailable: 2
+                        RateIcons: 1
+                        FeeID: 401369
+                        ReservationTypeID: 28680
+                        OriginalPlayersAvailable: 4
+                        CourseName: Willis Case Golf Course
+                        CourseLocation: 'Denver, CO'
+                        FlatRate: -1
+                        FlatRateFeeID: 0
+                        FlatRateReservationTypeID: 0
+                        FlatRateIcons: 0
+                        ReservationDate: '2020-08-21T00:00:00'
+                        CancellationPeriod: 24
+                        CurrencyLocaleID: 1033
+                        NumberOfPriceWindows: 1
+                        Utilization: 0
+                        PriceWindowIDs: '0'
+                        PriceWindowPrices: '0.02'
+                        CancellationPeriodActive: 24
+                        SKURegular: '0215001001'
+                        SKUSpecial: ''
+                        SKUs: null
+                        ValueIconString: '1'
+                        TotalRecords: 1
+                        RegularPrice: 0.02
+                        IsBookable: true
+                        StartRotationName: null
+                        FinishRotationName: null
+                        TurnCourseID: 4924
+                        TeeTimeDisplay: '3:10 PM'
+                        TeeDateDisplay: 8/21/2020
+                        PriceMin: '0.0200'
+                        PriceMax: '0.0200'
+                        SavingsDisplay: ''
+                        RateIconsList: '1'
+                        FlatRateIconsList: ''
+                        PlayerDisplayText: null
+                        IconsList: null
+                        CurrencyDisplay: ­$
+                        PostCurrencyDisplay: ''
+                    PricingOptions:
+                      - AffiliateSponsorID: 6439
+                        DisplayOrder: 1
+                        DisplayedName: Come Play
+                        DisplayedDescription: ''
+      operationId: get-times-day
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: day
+        - schema:
+            type: integer
+          in: query
+          name: numHoles
+        - schema:
+            type: integer
+          in: query
+          name: numPlayers
+        - schema:
+            type: string
+          in: query
+          name: startTime
+        - schema:
+            type: string
+          in: query
+          name: endTime
+components:
+  schemas:
+    AvailableTimes:
+      title: AvailableTimes
+      type: object
+      properties:
+        id:
+          type: string
+      x-examples:
+        example-1:
+          CoursesIDs: '4921,4922,4923,4924,4925,4926,4927,4928,4929,4930,4931,4932,4933,4934,4935'
+          MinPrice: '0'
+          MaxPrice: '100'
+          RedirectTo: null
+          SessionID: wm54g4r245dgs5hmhvf1c0n3
+          CsrfToken: 22498795-1002-4576-afd1-b9e5e54d15a1
+          Packageses: null
+          Reservations:
+            - RecNo: 1
+              SponsorID: 6439
+              SponsorIds: null
+              CourseID: 4923
+              TeeTime: '2020-08-21T15:10:00'
+              Price: 0.02
+              Rackrate: 61
+              PlayersAvailable: 2
+              RateIcons: 1
+              FeeID: 401369
+              ReservationTypeID: 28680
+              OriginalPlayersAvailable: 4
+              CourseName: Willis Case Golf Course
+              CourseLocation: 'Denver, CO'
+              FlatRate: -1
+              FlatRateFeeID: 0
+              FlatRateReservationTypeID: 0
+              FlatRateIcons: 0
+              ReservationDate: '2020-08-21T00:00:00'
+              CancellationPeriod: 24
+              CurrencyLocaleID: 1033
+              NumberOfPriceWindows: 1
+              Utilization: 0
+              PriceWindowIDs: '0'
+              PriceWindowPrices: '0.02'
+              CancellationPeriodActive: 24
+              SKURegular: '0215001001'
+              SKUSpecial: ''
+              SKUs: null
+              ValueIconString: '1'
+              TotalRecords: 1
+              RegularPrice: 0.02
+              IsBookable: true
+              StartRotationName: null
+              FinishRotationName: null
+              TurnCourseID: 4924
+              TeeTimeDisplay: '3:10 PM'
+              TeeDateDisplay: 8/21/2020
+              PriceMin: '0.0200'
+              PriceMax: '0.0200'
+              SavingsDisplay: ''
+              RateIconsList: '1'
+              FlatRateIconsList: ''
+              PlayerDisplayText: null
+              IconsList: null
+              CurrencyDisplay: ­$
+              PostCurrencyDisplay: ''
+          PricingOptions:
+            - AffiliateSponsorID: 6439
+              DisplayOrder: 1
+              DisplayedName: Come Play
+              DisplayedDescription: ''
