@@ -1,0 +1,25 @@
+{
+  "name": "denvergolf",
+  "version": "1.0.0",
+  "description": "POC for denver golf tee time finder",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baunuts/denvergolf.git"
+  },
+  "author": "Adam Bauman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baunuts/denvergolf/issues"
+  },
+  "homepage": "https://github.com/baunuts/denvergolf#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
